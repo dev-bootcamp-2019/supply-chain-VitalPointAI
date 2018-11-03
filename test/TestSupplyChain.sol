@@ -6,6 +6,14 @@ import "../contracts/SupplyChain.sol";
 
 contract TestSupplyChain {
 
+//Make sure testing is working
+//Test initial value of skuCount = 0
+function testInitialValueOfSkuCount() public {
+    SupplyChain supply = new SupplyChain();
+    uint expectedValue = 0;
+    Assert.equal(supply.skuCount(), expectedValue, "skuCount starts at 0");
+}
+
     // Test for failing conditions in this contracts
     // test that every modifier is working
 
