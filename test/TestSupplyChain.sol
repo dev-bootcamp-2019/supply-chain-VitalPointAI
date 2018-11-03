@@ -14,6 +14,14 @@ function testInitialValueOfSkuCount() public {
     Assert.equal(supply.skuCount(), expectedValue, "skuCount starts at 0");
 }
 
+//Test addItem
+function testAddItem() public {
+    SupplyChain supply = new SupplyChain();
+    supply.addItem("bear", 100);
+    uint expectedSku = 1;
+    Assert.equal(supply.skuCount(), expectedSku, "Sku should be 1");
+}
+
     // Test for failing conditions in this contracts
     // test that every modifier is working
 
